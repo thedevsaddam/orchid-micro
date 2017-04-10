@@ -1,0 +1,4 @@
+// +build all
+
+package tests
+
