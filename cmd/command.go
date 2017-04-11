@@ -5,6 +5,7 @@ import (
 	"app/helpers/console"
 	"app/helpers/general"
 	"fmt"
+	"os"
 )
 
 func main() {
@@ -15,7 +16,7 @@ func main() {
 	switch general.Scanner() {
 	case "0":
 		console.ConsoleWarning("Exited from command mode!")
-		return
+		os.Exit(1)
 	case "1":
 		migrations.Migrate()
 	case "2":
